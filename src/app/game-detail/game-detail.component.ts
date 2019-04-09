@@ -20,7 +20,7 @@ export class GameDetailComponent implements OnInit {
     gameDescription: new FormControl(),
     gameCategory: new FormControl(),
   };
-  
+
   constructor(
     private gamesService: GamesService,
     private route: ActivatedRoute,
@@ -40,7 +40,7 @@ export class GameDetailComponent implements OnInit {
       }
     )
   }
-  
+
   saveGame() {
     const formValues = this.editGameForm.value;
     console.log('formValues: ', formValues);
