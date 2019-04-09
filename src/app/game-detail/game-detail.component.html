@@ -1,0 +1,14 @@
+<div>
+  <h2>{{game.name}}</h2>
+  <p>ID: {{game.id}}</p>
+  <p>Category: {{game.category}}</p>
+  <h3>Desscription:</h3>
+  <p>{{game.description}}</p>
+</div>
+<div>
+  <form [formGroup]="editGameForm" (ngSubmit)="saveGame()">
+    <input type="hidden" formControlName="gameId" />
+    <input type="text" formControlName="gameName" />
+    <button type="submit">Save</button>
+  </form>
+</div>

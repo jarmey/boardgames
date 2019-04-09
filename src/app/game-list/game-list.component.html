@@ -1,0 +1,22 @@
+<ul>
+  <li *ngFor="let game of gameList">
+    <a routerLink="/detail/{{game.id}}">
+    {{game.name}}
+    </a>
+  </li>
+</ul>
+<form [formGroup]="addGameForm" (ngSubmit)="onSubmit()">
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+  </label>
+  <label>
+    Description:
+    <input type="text" formControlName="description">
+  </label>
+  <label>
+    Category:
+    <input type="text" formControlName="category">
+  </label>
+  <button type="submit" [disabled]="!addGameForm.valid">Submit</button>
+</form>
