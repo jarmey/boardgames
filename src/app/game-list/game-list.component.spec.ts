@@ -1,5 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import {ReactiveFormsModule} from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 import { GameListComponent } from './game-list.component';
 
 describe('GameListComponent', () => {
@@ -8,7 +11,12 @@ describe('GameListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GameListComponent ]
+      declarations: [ GameListComponent ],
+      imports: [
+        RouterTestingModule,
+        ReactiveFormsModule,
+        HttpClientTestingModule,
+      ],
     })
     .compileComponents();
   }));

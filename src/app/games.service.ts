@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-//import { Hero } from './hero';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap} from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -19,7 +17,7 @@ export class GamesService {
   }
 
   getGameById(id) {
-    return this.http.get<any[]>(this.gamesUrl+'?id='+id);
+    return this.http.get<any[]>(this.gamesUrl+'?geekId='+id);
   }
 
 

@@ -1,9 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { GamesService } from './games.service';
+import { GeekService } from './geek.service';
 
-describe('GamesService', () => {
+describe('GeekService', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [
       HttpClientTestingModule,
@@ -11,7 +11,7 @@ describe('GamesService', () => {
   }));
 
   it('should be created', () => {
-    const service: GamesService = TestBed.get(GamesService);
+    const service: GeekService = TestBed.get(GeekService);
     expect(service).toBeTruthy();
   });
 });

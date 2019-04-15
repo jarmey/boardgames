@@ -1,0 +1,6 @@
+<h2>What to play next</h2>
+<button (click)="geekCollection()">Reccommend!</button>
+<ul>
+  <li *ngFor="let game of geekGameList">{{game.name}}</li>
+</ul>
+

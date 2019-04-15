@@ -8,13 +8,21 @@ import { AppComponent } from './app.component';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameDetailComponent } from './game-detail/game-detail.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { RecommendGamesComponent } from './recommend-games/recommend-games.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameListComponent,
     GameDetailComponent,
-    NavigationComponent
+    NavigationComponent,
+    RecommendGamesComponent,
+  ],
+  exports: [
+    AppComponent,
+    NavigationComponent,
+    GameDetailComponent,
+    GameListComponent,
   ],
   imports: [
     BrowserModule,
