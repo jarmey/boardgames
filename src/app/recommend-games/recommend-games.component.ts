@@ -29,31 +29,28 @@ export class RecommendGamesComponent implements OnInit {
             list = result;
           });
         this.geekGameList = GeekJson(list);
-        console.log('geekGameList: ', this.geekGameList);
-        console.log('these game ids will be added!', this.buildInsertList(list))
+        this.getInsertList();
         });
   }
 
-  geekList = [{'geekId' : '1'},{'geekId' : '2'}];
+  //geekList = [{'geekId' : '1'},{'geekId' : '2'}];
 
-  buildInsertList(collection) {
-    for (let game of collection) {
-      this.gamesService.getGameById(game['geekId'])
+  getInsertList() {
+    //for (let game of collection) {
+      this.gamesService.checkIfExists([1,2,3])
           .subscribe(
             gameList => {
-              this.gameUpdateList.push(gameList['geekId']);
-              //this.gameUpdateList.push('1');
-              console.log('buildinsert', this.gameUpdateList);
+              //this.gameUpdateList.push(gameList);
               console.log('buildinsert gamelist', gameList);
-              console.log('collection: ', collection);
             },
           );
-    }
-    return this.gameUpdateList;
+    //}
+    //return this.gameUpdateList;
   }
 
   ngOnInit() {
-    this.buildInsertList(this.geekList);
+    //this.buildInsertList(this.geekList);
+    //this.geekCollection();
   }
 
 }
